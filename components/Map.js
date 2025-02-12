@@ -59,7 +59,7 @@ export default function Map({ full }) {
   useEffect(() => {
     async function fetchEvents() {
       try {
-        const response = await fetch('/api/locations')
+        const response = await fetch('/api/fetch')
         const data = await response.json()
         setEvents([flagshipEvent, ...data])
       } catch (error) {
